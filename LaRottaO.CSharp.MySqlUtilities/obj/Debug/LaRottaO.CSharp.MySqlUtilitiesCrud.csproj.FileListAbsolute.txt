@@ -1,0 +1,116 @@
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\LaRottaO.CSharp.MySqlUtilities.dll.config
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\LaRottaO.CSharp.MySqlUtilities.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\LaRottaO.CSharp.MySqlUtilities.pdb
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\BouncyCastle.Crypto.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\Google.Protobuf.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\K4os.Compression.LZ4.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\K4os.Hash.xxHash.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\MySql.Data.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\Renci.SshNet.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\System.Buffers.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\System.Memory.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\System.Numerics.Vectors.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\Google.Protobuf.pdb
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\Google.Protobuf.xml
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\K4os.Compression.LZ4.xml
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\K4os.Hash.xxHash.xml
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\Renci.SshNet.xml
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\System.Buffers.xml
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\System.Memory.xml
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\System.Numerics.Vectors.xml
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csprojAssemblyReference.cache
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csproj.CoreCompileInputs.cache
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csproj.CopyComplete
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\obj\Debug\LaRottaO.CSharp.MySqlUtilities.dll
+C:\Repos.LaRottaO\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilities\obj\Debug\LaRottaO.CSharp.MySqlUtilities.pdb
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\LaRottaO.CSharp.MySqlUtilities.dll.config
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\LaRottaO.CSharp.MySqlUtilities.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\LaRottaO.CSharp.MySqlUtilities.pdb
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\BouncyCastle.Crypto.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Google.Protobuf.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Hash.xxHash.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\MySql.Data.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Renci.SshNet.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Buffers.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Memory.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Numerics.Vectors.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Google.Protobuf.pdb
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Google.Protobuf.xml
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.xml
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Hash.xxHash.xml
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Renci.SshNet.xml
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Buffers.xml
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Memory.xml
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Numerics.Vectors.xml
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csprojAssemblyReference.cache
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csproj.CoreCompileInputs.cache
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csproj.CopyComplete
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilities.dll
+C:\Repos.Yobi\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilities.pdb
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\LaRottaO.CSharp.MySqlUtilities.dll.config
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\LaRottaO.CSharp.MySqlUtilities.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\LaRottaO.CSharp.MySqlUtilities.pdb
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Google.Protobuf.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\MySql.Data.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Renci.SshNet.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Buffers.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Memory.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Google.Protobuf.pdb
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Google.Protobuf.xml
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Renci.SshNet.xml
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Buffers.xml
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Memory.xml
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csprojAssemblyReference.cache
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csproj.CoreCompileInputs.cache
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csproj.CopyComplete
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilities.dll
+C:\Users\17-Celmax\Yobitel\Sharepoint Técnico - Documentos\41 Desarrollos internos\Software\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilities.pdb
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\LaRottaO.CSharp.MySqlUtilities.dll.config
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\LaRottaO.CSharp.MySqlUtilities.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\LaRottaO.CSharp.MySqlUtilities.pdb
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\BouncyCastle.Crypto.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Hash.xxHash.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\MySql.Data.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Renci.SshNet.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Buffers.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Memory.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Numerics.Vectors.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Ubiety.Dns.Core.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Zstandard.Net.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.xml
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\K4os.Hash.xxHash.xml
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\MySql.Data.xml
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\Renci.SshNet.xml
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Buffers.xml
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Memory.xml
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Numerics.Vectors.xml
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csproj.AssemblyReference.cache
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csproj.CoreCompileInputs.cache
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilitiesCrud.csproj.CopyComplete
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilities.dll
+C:\Repositorios\LaRottaO.CSharp.Utils.MySqlCrud\LaRottaO.CSharp.MySqlUtilitiesCrud\obj\Debug\LaRottaO.CSharp.MySqlUtilities.pdb
