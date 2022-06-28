@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "de88e252-edf6-4aae-9d54-0b48f3c6bc11": {
+      "ProjectGuid": "de88e252-edf6-4aae-9d54-0b48f3c6bc11",
+      "DisplayName": "LaRottaO.CSharp.MySqlUtilities",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

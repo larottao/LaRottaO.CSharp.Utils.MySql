@@ -83,7 +83,10 @@ namespace LaRottaO.CSharp.MySqlUtilities
                                     catch (Exception ex)
                                     {
                                         propertyToBeChanged.SetValue(destinationObject, null);
-                                        throw new InvalidOperationException("Parsing the property: " + property.Name + " failed. " + ex.Message);
+
+                                        String errorMessageForConsole = "ERROR: Parsing the property: " + property.Name + " failed. " + ex.Message;
+                                        Console.WriteLine(errorMessageForConsole);
+                                        return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_ERROR + errorMessageForConsole, new List<T>());
                                     }
                                 }
                             }
@@ -103,6 +106,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
                 }
                 catch (Exception ex)
                 {
+                    Console.WriteLine(ex.StackTrace);
                     return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_ERROR + " " + ex, new List<T>());
                 }
                 finally
