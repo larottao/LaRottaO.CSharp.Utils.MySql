@@ -12,6 +12,8 @@ namespace LaRottaO.CSharp.MySqlUtilities
     {
         public Task<Tuple<Boolean, String, List<T>>> select<T>(string argConnString, String argQuery, int argTimeoutMs) where T : new()
         {
+            Console.WriteLine("Connection String is: " + argConnString);
+
             return Task.Run(() =>
             {
                 MySqlConnection conn = new MySqlConnection(argConnString);
