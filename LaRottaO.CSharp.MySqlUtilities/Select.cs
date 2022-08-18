@@ -108,7 +108,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.StackTrace);
+                    Console.WriteLine(ex.Message + " " + ex.StackTrace);
                     return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_ERROR + " " + ex, new List<T>());
                 }
                 finally
