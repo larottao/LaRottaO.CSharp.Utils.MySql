@@ -9,57 +9,54 @@ namespace LaRottaO.CSharp.MySqlUtilities
 {
     public class SelectSingleColumn
     {
-        public Task<Tuple<Boolean, String, List<String>>> selectSingleColumn(string argConnString, String argQuery, int argRequiredColumnIndex, int argTimeoutMs)
+        public async Task<Tuple<Boolean, String, List<String>>> selectSingleColumn(string argConnString, String argQuery, int argRequiredColumnIndex, int argTimeoutMs)
         {
-            return Task.Run(() =>
+            MySqlConnection mySqlConnection = new MySqlConnection(argConnString);
+
+            MySqlDataReader mySqlDataReader = null;
+
+            try
             {
-                MySqlConnection mySqlConnection = new MySqlConnection(argConnString);
+                mySqlConnection.Open();
 
-                MySqlDataReader mySqlDataReader = null;
+                MySqlCommand mySqlCommand = new MySqlCommand(argQuery, mySqlConnection);
 
-                try
+                if (argTimeoutMs != -1)
                 {
-                    mySqlConnection.Open();
-
-                    MySqlCommand mySqlCommand = new MySqlCommand(argQuery, mySqlConnection);
-
-                    if (argTimeoutMs != -1)
-                    {
-                        mySqlCommand.CommandTimeout = argTimeoutMs;
-                    }
-
-                    mySqlDataReader = mySqlCommand.ExecuteReader();
-
-                    List<String> outputList = new List<String>();
-
-                    while (mySqlDataReader.Read())
-                    {
-                        outputList.Add(mySqlDataReader.GetValue(argRequiredColumnIndex).ToString());
-                    }
-
-                    if (outputList.Count == 0)
-                    {
-                        return new Tuple<Boolean, String, List<String>>(true, Constants.MYSQL_NO_RESULTS, outputList);
-                    }
-
-                    return new Tuple<Boolean, String, List<String>>(true, Constants.MYSQL_SUCCESS, outputList);
+                    mySqlCommand.CommandTimeout = argTimeoutMs;
                 }
-                catch (Exception ex)
+
+                mySqlDataReader = mySqlCommand.ExecuteReader();
+
+                List<String> outputList = new List<String>();
+
+                while (mySqlDataReader.Read())
                 {
-                    return new Tuple<Boolean, String, List<String>>(false, Constants.MYSQL_ERROR + " " + ex.ToString(), null);
+                    outputList.Add(mySqlDataReader.GetValue(argRequiredColumnIndex).ToString());
                 }
-                finally
+
+                if (outputList.Count == 0)
                 {
-                    if (mySqlDataReader != null)
-                    {
-                        mySqlDataReader.Close();
-                    }
-                    if (mySqlConnection != null)
-                    {
-                        mySqlConnection.Close();
-                    }
+                    return new Tuple<Boolean, String, List<String>>(true, Constants.MYSQL_NO_RESULTS, outputList);
                 }
-            });
+
+                return new Tuple<Boolean, String, List<String>>(true, Constants.MYSQL_SUCCESS, outputList);
+            }
+            catch (Exception ex)
+            {
+                return new Tuple<Boolean, String, List<String>>(false, Constants.MYSQL_ERROR + " " + ex.ToString(), null);
+            }
+            finally
+            {
+                if (mySqlDataReader != null)
+                {
+                    mySqlDataReader.Close();
+                }
+                if (mySqlConnection != null)
+                {
+                    mySqlConnection.Close();
+                }
+            }
         }
     }
 }

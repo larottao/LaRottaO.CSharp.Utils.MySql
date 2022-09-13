@@ -9,42 +9,39 @@ namespace LaRottaO.CSharp.MySqlUtilities
 {
     public class Update
     {
-        public Task<Tuple<Boolean, String, int>> update(string argConnectionString, String stringQuery, int argTimeOutMs)
+        public async Task<Tuple<Boolean, String, int>> update(string argConnectionString, String stringQuery, int argTimeOutMs)
         {
-            return Task.Run(() =>
+            MySqlConnection mySqlConnection = new MySqlConnection(argConnectionString);
+
+            MySqlDataReader mySqlDataReader = null;
+
+            try
             {
-                MySqlConnection mySqlConnection = new MySqlConnection(argConnectionString);
+                mySqlConnection.Open();
 
-                MySqlDataReader mySqlDataReader = null;
+                MySqlCommand mySqlCommand = new MySqlCommand(stringQuery, mySqlConnection);
 
-                try
+                if (argTimeOutMs != -1)
                 {
-                    mySqlConnection.Open();
-
-                    MySqlCommand mySqlCommand = new MySqlCommand(stringQuery, mySqlConnection);
-
-                    if (argTimeOutMs != -1)
-                    {
-                        mySqlCommand.CommandTimeout = argTimeOutMs;
-                    }
-
-                    int resultadoUpdate = mySqlCommand.ExecuteNonQuery();
-
-                    return new Tuple<Boolean, String, int>(true, Constants.MYSQL_SUCCESS, resultadoUpdate);
+                    mySqlCommand.CommandTimeout = argTimeOutMs;
                 }
-                catch (Exception ex)
+
+                int resultadoUpdate = mySqlCommand.ExecuteNonQuery();
+
+                return new Tuple<Boolean, String, int>(true, Constants.MYSQL_SUCCESS, resultadoUpdate);
+            }
+            catch (Exception ex)
+            {
+                return new Tuple<Boolean, String, int>(false, Constants.MYSQL_ERROR + " " + ex.ToString(), 0);
+            }
+            finally
+            {
+                if (mySqlDataReader != null)
                 {
-                    return new Tuple<Boolean, String, int>(false, Constants.MYSQL_ERROR + " " + ex.ToString(), 0);
+                    mySqlDataReader.Close();
+                    mySqlConnection.Close();
                 }
-                finally
-                {
-                    if (mySqlDataReader != null)
-                    {
-                        mySqlDataReader.Close();
-                        mySqlConnection.Close();
-                    }
-                }
-            });
+            }
         }
     }
 }

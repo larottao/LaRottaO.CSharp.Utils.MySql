@@ -9,49 +9,53 @@ namespace LaRottaO.CSharp.MySqlUtilities
 {
     public class Insert
     {
-        public Task<List<Tuple<Boolean, String>>> insert(string argConnString, List<String> argQueries, int argTimeoutMs)
+        public async Task<List<Tuple<Boolean, String>>> insert(string argConnString, List<String> argQueries, int argTimeoutMs, Boolean argShowDebug = false)
         {
-            return Task.Run(() =>
+            MySqlConnection mySqlConnection = new MySqlConnection(argConnString);
+
+            MySqlDataReader mySqlDataReader = null;
+
+            List<Tuple<Boolean, String>> resultsList = new List<Tuple<Boolean, String>>();
+
+            try
             {
-                MySqlConnection mySqlConnection = new MySqlConnection(argConnString);
+                mySqlConnection.Open();
 
-                MySqlDataReader mySqlDataReader = null;
-
-                List<Tuple<Boolean, String>> resultsList = new List<Tuple<Boolean, String>>();
-
-                try
+                foreach (String query in argQueries)
                 {
-                    mySqlConnection.Open();
-
-                    foreach (String query in argQueries)
+                    if (argShowDebug)
                     {
-                        MySqlCommand mySqlCommand = new MySqlCommand(query, mySqlConnection);
-
-                        if (argTimeoutMs != -1)
-                        {
-                            mySqlCommand.CommandTimeout = argTimeoutMs;
-                        }
-
-                        resultsList.Add(new Tuple<Boolean, String>(true, query + " " + mySqlCommand.ExecuteNonQuery()));
+                        Console.WriteLine(query);
                     }
 
-                    return resultsList;
-                }
-                catch (Exception ex)
-                {
-                    resultsList.Add(new Tuple<Boolean, String>(false, Constants.MYSQL_ERROR + " " + ex.Message.ToString()));
+                    MySqlCommand mySqlCommand = new MySqlCommand(query, mySqlConnection);
 
-                    return resultsList;
-                }
-                finally
-                {
-                    if (mySqlDataReader != null)
+                    if (argTimeoutMs != -1)
                     {
-                        mySqlDataReader.Close();
-                        mySqlConnection.Close();
+                        mySqlCommand.CommandTimeout = argTimeoutMs;
                     }
+
+                    resultsList.Add(new Tuple<Boolean, String>(true, query + " " + mySqlCommand.ExecuteNonQuery()));
                 }
-            });
+
+                return resultsList;
+            }
+            catch (Exception ex)
+            {
+                resultsList.Add(new Tuple<Boolean, String>(false, Constants.MYSQL_ERROR + " " + ex.Message.ToString()));
+
+                return resultsList;
+            }
+            finally
+            {
+                if (mySqlDataReader != null)
+                {
+                    mySqlDataReader.Close();
+                }
+
+                if (mySqlConnection != null)
+                    mySqlConnection.Close();
+            }
         }
     }
 }

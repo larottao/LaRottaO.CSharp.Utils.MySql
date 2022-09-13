@@ -1,0 +1,2 @@
+C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\obj\Release\LaRottaO.CSharp.MySqlUtilities.csproj.AssemblyReference.cache
+C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\obj\Release\LaRottaO.CSharp.MySqlUtilities.csproj.CoreCompileInputs.cache

@@ -9,7 +9,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
 {
     public class LoadDataInFile
     {
-        public Task<Tuple<Boolean, String, int>> loadDataInFile(String argConnString, StringBuilder argLoadDataQuery)
+        public async Task<Tuple<Boolean, String, int>> loadDataInFile(String argConnString, StringBuilder argLoadDataQuery)
 
         {
             /*
@@ -24,35 +24,32 @@ namespace LaRottaO.CSharp.MySqlUtilities
             SET DATE_INSERT = NOW()
             */
 
-            return Task.Run(() =>
+            MySqlConnection conn = new MySqlConnection(argConnString + ";AllowLoadLocalInfile=true");
+
+            MySqlDataReader rdr = null;
+
+            try
             {
-                MySqlConnection conn = new MySqlConnection(argConnString + ";AllowLoadLocalInfile=true");
+                conn.Open();
 
-                MySqlDataReader rdr = null;
+                MySqlCommand cmd = new MySqlCommand(argLoadDataQuery.ToString(), conn);
 
-                try
+                int loaderResult = cmd.ExecuteNonQuery();
+
+                return new Tuple<Boolean, String, int>(true, Constants.MYSQL_SUCCESS, loaderResult);
+            }
+            catch (Exception ex)
+            {
+                return new Tuple<Boolean, String, int>(false, Constants.MYSQL_ERROR + " " + ex.ToString(), 0);
+            }
+            finally
+            {
+                if (rdr != null)
                 {
-                    conn.Open();
-
-                    MySqlCommand cmd = new MySqlCommand(argLoadDataQuery.ToString(), conn);
-
-                    int loaderResult = cmd.ExecuteNonQuery();
-
-                    return new Tuple<Boolean, String, int>(true, Constants.MYSQL_SUCCESS, loaderResult);
+                    rdr.Close();
+                    conn.Close();
                 }
-                catch (Exception ex)
-                {
-                    return new Tuple<Boolean, String, int>(false, Constants.MYSQL_ERROR + " " + ex.ToString(), 0);
-                }
-                finally
-                {
-                    if (rdr != null)
-                    {
-                        rdr.Close();
-                        conn.Close();
-                    }
-                }
-            });
+            }
         }
     }
 }

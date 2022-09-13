@@ -1,18 +1,20 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace LaRottaO.CSharp.MySqlUtilities
 {
     public class Select
     {
-        public Task<Tuple<Boolean, String, List<T>>> select<T>(string argConnString, String argQuery, int argTimeoutMs) where T : new()
+        public Task<Tuple<Boolean, String, List<T>>> select<T>(string argConnString, String argQuery, int argTimeoutMs, Boolean showDebug = false) where T : new()
         {
-            Console.WriteLine("Connection String is: " + argConnString);
+            if (showDebug)
+            {
+                Console.WriteLine("Connection String is: " + argConnString);
+                Console.WriteLine("Query is: " + argQuery);
+            }
 
             return Task.Run(() =>
             {
