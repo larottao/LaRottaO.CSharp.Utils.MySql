@@ -8,7 +8,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
 {
     public class Select
     {
-        public Task<Tuple<Boolean, String, List<T>>> select<T>(string argConnString, String argQuery, int argTimeoutMs, Boolean showDebug = false) where T : new()
+        public async Task<Tuple<Boolean, String, List<T>>> select<T>(string argConnString, String argQuery, int argTimeoutMs, Boolean showDebug = false) where T : new()
         {
             if (showDebug)
             {
@@ -16,115 +16,112 @@ namespace LaRottaO.CSharp.MySqlUtilities
                 Console.WriteLine("Query is: " + argQuery);
             }
 
-            return Task.Run(() =>
+            MySqlConnection conn = new MySqlConnection(argConnString);
+
+            MySqlDataReader rdr = null;
+
+            try
             {
-                MySqlConnection conn = new MySqlConnection(argConnString);
+                conn.Open();
 
-                MySqlDataReader rdr = null;
+                MySqlCommand cmd = new MySqlCommand(argQuery, conn);
 
-                try
+                if (argTimeoutMs != -1)
                 {
-                    conn.Open();
+                    cmd.CommandTimeout = argTimeoutMs;
+                }
 
-                    MySqlCommand cmd = new MySqlCommand(argQuery, conn);
+                rdr = cmd.ExecuteReader();
 
-                    if (argTimeoutMs != -1)
-                    {
-                        cmd.CommandTimeout = argTimeoutMs;
-                    }
+                //  Create a dictionary that contains each column name and a consecutive number. That number will be later  used to locate the column by its name.
 
-                    rdr = cmd.ExecuteReader();
+                Dictionary<String, int> dictionaryColumnNameVsIndex = new Dictionary<String, int>();
 
-                    //  Create a dictionary that contains each column name and a consecutive number. That number will be later  used to locate the column by its name.
+                for (int i = 0; i < rdr.FieldCount; i++)
+                {
+                    String nombreColumna = rdr.GetName(i);
+                    dictionaryColumnNameVsIndex.Add(nombreColumna, i);
+                }
 
-                    Dictionary<String, int> dictionaryColumnNameVsIndex = new Dictionary<String, int>();
+                PropertyInfo[] properties = typeof(T).GetProperties();
+
+                T destinationObject;
+
+                List<T> listaSalida = new List<T>();
+
+                while (rdr.Read())
+                {
+                    //  For each row obtained from the query execution, create a new instance of the Object
+
+                    destinationObject = new T();
 
                     for (int i = 0; i < rdr.FieldCount; i++)
                     {
-                        String nombreColumna = rdr.GetName(i);
-                        dictionaryColumnNameVsIndex.Add(nombreColumna, i);
-                    }
-
-                    PropertyInfo[] properties = typeof(T).GetProperties();
-
-                    T destinationObject;
-
-                    List<T> listaSalida = new List<T>();
-
-                    while (rdr.Read())
-                    {
-                        //  For each row obtained from the query execution, create a new instance of the Object
-
-                        destinationObject = new T();
-
-                        for (int i = 0; i < rdr.FieldCount; i++)
+                        foreach (PropertyInfo property in properties)
                         {
-                            foreach (PropertyInfo property in properties)
+                            //  Check if the destination object contains a property with the same name.
+
+                            if (dictionaryColumnNameVsIndex.ContainsKey(property.Name))
                             {
-                                //  Check if the destination object contains a property with the same name.
+                                //  If it does, assign the value to said property.
 
-                                if (dictionaryColumnNameVsIndex.ContainsKey(property.Name))
+                                PropertyInfo propertyToBeChanged = destinationObject.GetType().GetProperty(property.Name);
+
+                                Object newValue = null;
+
+                                try
                                 {
-                                    //  If it does, assign the value to said property.
+                                    newValue = rdr[dictionaryColumnNameVsIndex[property.Name]];
 
-                                    PropertyInfo propertyToBeChanged = destinationObject.GetType().GetProperty(property.Name);
-
-                                    Object newValue = null;
-
-                                    try
-                                    {
-                                        newValue = rdr[dictionaryColumnNameVsIndex[property.Name]];
-
-                                        if (newValue == null || newValue.GetType().ToString() == "System.DBNull")
-                                        {
-                                            propertyToBeChanged.SetValue(destinationObject, null);
-                                        }
-                                        else
-                                        {
-                                            propertyToBeChanged.SetValue(destinationObject, newValue);
-                                        }
-                                    }
-                                    catch (Exception ex)
+                                    if (newValue == null || newValue.GetType().ToString() == "System.DBNull")
                                     {
                                         propertyToBeChanged.SetValue(destinationObject, null);
-
-                                        String errorMessageForConsole = "ERROR: Parsing the property: " + property.Name + " failed. " + ex.Message;
-                                        Console.WriteLine(errorMessageForConsole);
-                                        return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_ERROR + errorMessageForConsole, new List<T>());
                                     }
+                                    else
+                                    {
+                                        propertyToBeChanged.SetValue(destinationObject, newValue);
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    propertyToBeChanged.SetValue(destinationObject, null);
+
+                                    String errorMessageForConsole = "ERROR: Parsing the property: " + property.Name + " failed. " + ex.Message;
+                                    Console.WriteLine(errorMessageForConsole);
+                                    return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_ERROR + errorMessageForConsole, new List<T>());
                                 }
                             }
                         }
-
-                        //  After all rows have been processed, return the object list
-
-                        listaSalida.Add(destinationObject);
                     }
 
-                    if (listaSalida.Count == 0)
-                    {
-                        return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_NO_RESULTS, listaSalida);
-                    }
+                    //  After all rows have been processed, return the object list
 
-                    return new Tuple<Boolean, String, List<T>>(true, Constants.MYSQL_SUCCESS, listaSalida);
+                    listaSalida.Add(destinationObject);
                 }
-                catch (Exception ex)
+
+                if (listaSalida.Count == 0)
                 {
-                    Console.WriteLine(ex.Message + " " + ex.StackTrace);
-                    return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_ERROR + " " + ex, new List<T>());
+                    return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_NO_RESULTS, listaSalida);
                 }
-                finally
+
+                return new Tuple<Boolean, String, List<T>>(true, Constants.MYSQL_SUCCESS, listaSalida);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message + " " + ex.StackTrace);
+                return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_ERROR + " " + ex, new List<T>());
+            }
+            finally
+            {
+                if (rdr != null)
                 {
-                    if (rdr != null)
-                    {
-                        rdr.Close();
-                    }
-                    if (conn != null)
-                    {
-                        conn.Close();
-                    }
+                    rdr.Close();
                 }
-            });
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
         }
     }
 }
