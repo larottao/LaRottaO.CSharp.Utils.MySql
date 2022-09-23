@@ -10,7 +10,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
 {
     public class ExecuteStoredProcedure
     {
-        public async Task<Tuple<Boolean, String, List<Dictionary<String, String>>>> executeStoredProcedure(String argConnString, String argStoredProcedureName, Dictionary<String, String> argInputParametersList, List<String> argOutputParametersList, int argTimeOutMs)
+        public async Task<Tuple<Boolean, String, List<Dictionary<String, String>>>> executeStoredProcedure(String argConnString, String argStoredProcedureName, Dictionary<String, object> argInputParametersList, List<String> argOutputParametersList, int argTimeOutMs)
         {
             MySqlConnection MmSqlConnection = new MySqlConnection(argConnString);
             MySqlCommand mySqlCommand = new MySqlCommand();
@@ -33,7 +33,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
 
                 mySqlCommand.CommandType = CommandType.StoredProcedure;
 
-                foreach (KeyValuePair<string, string> inputParameter in argInputParametersList)
+                foreach (KeyValuePair<string, object> inputParameter in argInputParametersList)
                 {
                     mySqlCommand.Parameters.Add(new MySqlParameter(inputParameter.Key, inputParameter.Value));
                 }
