@@ -38,7 +38,6 @@ namespace LaRottaO.CSharp.MySqlUtilities
                     if (argShowDebug)
                     {
                         Debug.WriteLine(actualQueryForDebugPurposes + " SUCCESS");
-                        Console.WriteLine(actualQueryForDebugPurposes + " SUCCESS");
                     }
                 }
 
@@ -46,7 +45,6 @@ namespace LaRottaO.CSharp.MySqlUtilities
             }
             catch (Exception ex)
             {
-                Console.WriteLine(actualQueryForDebugPurposes + " FAILED " + ex.Message.ToString());
                 Debug.WriteLine(actualQueryForDebugPurposes + " FAILED " + ex.Message.ToString());
 
                 resultsList.Add(new Tuple<Boolean, String>(false, Constants.MYSQL_ERROR + " " + ex.Message.ToString()));
