@@ -54,17 +54,16 @@ namespace LaRottaO.CSharp.MySqlUtilities
                         totalOutputRows.Add(singleOutputRow);
                     }
                 }
-                if(totalOutputRows.Count == 0)
+                if (totalOutputRows.Count == 0)
                 {
                     return new Tuple<Boolean, String, List<Dictionary<String, Object>>>(true, Constants.MYSQL_NO_RESULTS, totalOutputRows);
                 }
-
 
                 return new Tuple<Boolean, String, List<Dictionary<String, Object>>>(true, Constants.MYSQL_SUCCESS, totalOutputRows);
             }
             catch (Exception ex)
             {
-                return new Tuple<Boolean, String, List<Dictionary<String, Object>>>(false, Constants.MYSQL_ERROR + ex.Message, new List<Dictionary<String, Object>>());
+                return new Tuple<Boolean, String, List<Dictionary<String, Object>>>(false, Constants.MYSQL_ERROR + " " + ex.Message, new List<Dictionary<String, Object>>());
             }
             finally
             {

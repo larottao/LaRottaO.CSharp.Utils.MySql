@@ -1,8 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace LaRottaO.CSharp.MySqlUtilities
@@ -17,31 +16,39 @@ namespace LaRottaO.CSharp.MySqlUtilities
 
             List<Tuple<Boolean, String>> resultsList = new List<Tuple<Boolean, String>>();
 
+            String actualQueryForDebugPurposes = "";
+
             try
             {
                 mySqlConnection.Open();
 
-                foreach (String query in argQueries)
+                foreach (String queryIterator in argQueries)
                 {
-                    if (argShowDebug)
-                    {
-                        Console.WriteLine(query);
-                    }
+                    actualQueryForDebugPurposes = queryIterator;
 
-                    MySqlCommand mySqlCommand = new MySqlCommand(query, mySqlConnection);
+                    MySqlCommand mySqlCommand = new MySqlCommand(queryIterator, mySqlConnection);
 
                     if (argTimeoutMs != -1)
                     {
                         mySqlCommand.CommandTimeout = argTimeoutMs;
                     }
 
-                    resultsList.Add(new Tuple<Boolean, String>(true, query + " " + mySqlCommand.ExecuteNonQuery()));
+                    resultsList.Add(new Tuple<Boolean, String>(true, queryIterator + " " + mySqlCommand.ExecuteNonQuery()));
+
+                    if (argShowDebug)
+                    {
+                        Debug.WriteLine(actualQueryForDebugPurposes + " SUCCESS");
+                        Console.WriteLine(actualQueryForDebugPurposes + " SUCCESS");
+                    }
                 }
 
                 return resultsList;
             }
             catch (Exception ex)
             {
+                Console.WriteLine(actualQueryForDebugPurposes + " FAILED " + ex.Message.ToString());
+                Debug.WriteLine(actualQueryForDebugPurposes + " FAILED " + ex.Message.ToString());
+
                 resultsList.Add(new Tuple<Boolean, String>(false, Constants.MYSQL_ERROR + " " + ex.Message.ToString()));
 
                 return resultsList;
