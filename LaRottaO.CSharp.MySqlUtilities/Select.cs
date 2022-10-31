@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Reflection;
 using System.Threading.Tasks;
 
@@ -87,7 +88,10 @@ namespace LaRottaO.CSharp.MySqlUtilities
                                     propertyToBeChanged.SetValue(destinationObject, null);
 
                                     String errorMessageForConsole = "ERROR: Parsing the property: " + property.Name + " failed. " + ex.Message;
+
                                     Console.WriteLine(errorMessageForConsole);
+                                    Debug.WriteLine(errorMessageForConsole);
+
                                     return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_ERROR + errorMessageForConsole, new List<T>());
                                 }
                             }
@@ -109,6 +113,8 @@ namespace LaRottaO.CSharp.MySqlUtilities
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message + " " + ex.StackTrace);
+                Debug.WriteLine(ex.Message + " " + ex.StackTrace);
+
                 return new Tuple<Boolean, String, List<T>>(false, Constants.MYSQL_ERROR + " " + ex, new List<T>());
             }
             finally
