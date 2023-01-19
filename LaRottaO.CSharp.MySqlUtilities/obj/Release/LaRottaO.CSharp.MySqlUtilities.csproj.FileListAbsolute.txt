@@ -5,17 +5,11 @@ C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\R
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\LaRottaO.CSharp.MySqlUtilities.pdb
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\BouncyCastle.Crypto.dll
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\Google.Protobuf.dll
-C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\K4os.Compression.LZ4.dll
-C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\K4os.Compression.LZ4.Streams.dll
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\K4os.Hash.xxHash.dll
-C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\MySql.Data.dll
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\Renci.SshNet.dll
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\System.Buffers.dll
-C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\System.Memory.dll
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\System.Numerics.Vectors.dll
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
-C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\Ubiety.Dns.Core.dll
-C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\Zstandard.Net.dll
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\Google.Protobuf.pdb
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\Google.Protobuf.xml
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\K4os.Compression.LZ4.xml
@@ -25,8 +19,6 @@ C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\R
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\Renci.SshNet.xml
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\System.Buffers.xml
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\System.Memory.xml
-C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\System.Numerics.Vectors.xml
-C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\obj\Release\LaRottaO.CSharp.MySqlUtilities.csproj.CopyComplete
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\obj\Release\LaRottaO.CSharp.MySqlUtilities.dll
 C:\Repositorios\LaRottaO.CSharp.Utils.MySql\LaRottaO.CSharp.MySqlUtilities\obj\Release\LaRottaO.CSharp.MySqlUtilities.pdb

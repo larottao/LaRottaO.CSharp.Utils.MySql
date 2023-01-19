@@ -33,9 +33,12 @@ namespace LaRottaO.CSharp.MySqlUtilities
 
                 mySqlCommand.CommandType = CommandType.StoredProcedure;
 
-                foreach (KeyValuePair<string, object> inputParameter in argInputParametersList)
+                if (argInputParametersList != null && argInputParametersList.Count > 0)
                 {
-                    mySqlCommand.Parameters.Add(new MySqlParameter(inputParameter.Key, inputParameter.Value));
+                    foreach (KeyValuePair<string, object> inputParameter in argInputParametersList)
+                    {
+                        mySqlCommand.Parameters.Add(new MySqlParameter(inputParameter.Key, inputParameter.Value));
+                    }
                 }
 
                 List<Dictionary<String, Object>> totalOutputRows = new List<Dictionary<String, Object>>();
@@ -46,12 +49,16 @@ namespace LaRottaO.CSharp.MySqlUtilities
                     {
                         Dictionary<String, Object> singleOutputRow = new Dictionary<String, Object>();
 
-                        foreach (String outputParameter in argOutputParametersList)
+                        if (argOutputParametersList != null && argOutputParametersList.Count > 0)
                         {
-                            singleOutputRow.Add(outputParameter, mySqlDataReader[outputParameter].ToString());
-                        }
+                            foreach (String outputParameter in argOutputParametersList)
 
-                        totalOutputRows.Add(singleOutputRow);
+                            {
+                                singleOutputRow.Add(outputParameter, mySqlDataReader[outputParameter].ToString());
+                            }
+
+                            totalOutputRows.Add(singleOutputRow);
+                        }
                     }
                 }
                 if (totalOutputRows.Count == 0)
