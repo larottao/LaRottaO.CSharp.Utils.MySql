@@ -1,8 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace LaRottaO.CSharp.MySqlUtilities
@@ -12,8 +9,6 @@ namespace LaRottaO.CSharp.MySqlUtilities
         public async Task<Tuple<Boolean, String, int>> update(string argConnectionString, String stringQuery, int argTimeOutMs)
         {
             MySqlConnection mySqlConnection = new MySqlConnection(argConnectionString);
-
-            MySqlDataReader mySqlDataReader = null;
 
             try
             {
@@ -26,7 +21,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
                     mySqlCommand.CommandTimeout = argTimeOutMs;
                 }
 
-                int resultadoUpdate = mySqlCommand.ExecuteNonQuery();
+                int resultadoUpdate = await mySqlCommand.ExecuteNonQueryAsync();
 
                 return new Tuple<Boolean, String, int>(true, Constants.MYSQL_SUCCESS, resultadoUpdate);
             }
@@ -36,11 +31,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
             }
             finally
             {
-                if (mySqlDataReader != null)
-                {
-                    mySqlDataReader.Close();
-                    mySqlConnection.Close();
-                }
+                mySqlConnection.Close();
             }
         }
     }

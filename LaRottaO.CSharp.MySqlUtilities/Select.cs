@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Diagnostics;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
 
             MySqlConnection conn = new MySqlConnection(argConnString);
 
-            MySqlDataReader rdr = null;
+            DbDataReader rdr = null;
 
             try
             {
@@ -32,7 +33,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
                     cmd.CommandTimeout = argTimeoutMs;
                 }
 
-                rdr = cmd.ExecuteReader();
+                rdr = await cmd.ExecuteReaderAsync();
 
                 //  Create a dictionary that contains each column name and a consecutive number. That number will be later  used to locate the column by its name.
 

@@ -1,7 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,17 +22,15 @@ namespace LaRottaO.CSharp.MySqlUtilities
             SET DATE_INSERT = NOW()
             */
 
-            MySqlConnection conn = new MySqlConnection(argConnString + ";AllowLoadLocalInfile=true");
-
-            MySqlDataReader rdr = null;
+            MySqlConnection mySqlConnection = new MySqlConnection(argConnString + ";AllowLoadLocalInfile=true");
 
             try
             {
-                conn.Open();
+                mySqlConnection.Open();
 
-                MySqlCommand cmd = new MySqlCommand(argLoadDataQuery.ToString(), conn);
+                MySqlCommand cmd = new MySqlCommand(argLoadDataQuery.ToString(), mySqlConnection);
 
-                int loaderResult = cmd.ExecuteNonQuery();
+                int loaderResult = await cmd.ExecuteNonQueryAsync();
 
                 return new Tuple<Boolean, String, int>(true, Constants.MYSQL_SUCCESS, loaderResult);
             }
@@ -44,11 +40,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
             }
             finally
             {
-                if (rdr != null)
-                {
-                    rdr.Close();
-                    conn.Close();
-                }
+                mySqlConnection.Close();
             }
         }
     }

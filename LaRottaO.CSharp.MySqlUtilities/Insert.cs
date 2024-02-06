@@ -12,8 +12,6 @@ namespace LaRottaO.CSharp.MySqlUtilities
         {
             MySqlConnection mySqlConnection = new MySqlConnection(argConnString);
 
-            MySqlDataReader mySqlDataReader = null;
-
             List<Tuple<Boolean, String>> resultsList = new List<Tuple<Boolean, String>>();
 
             String actualQueryForDebugPurposes = "";
@@ -33,7 +31,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
                         mySqlCommand.CommandTimeout = argTimeoutMs;
                     }
 
-                    resultsList.Add(new Tuple<Boolean, String>(true, queryIterator + " " + mySqlCommand.ExecuteNonQuery()));
+                    resultsList.Add(new Tuple<Boolean, String>(true, queryIterator + " " + await mySqlCommand.ExecuteNonQueryAsync()));
 
                     if (argShowDebug)
                     {
@@ -53,13 +51,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
             }
             finally
             {
-                if (mySqlDataReader != null)
-                {
-                    mySqlDataReader.Close();
-                }
-
-                if (mySqlConnection != null)
-                    mySqlConnection.Close();
+                mySqlConnection.Close();
             }
         }
     }

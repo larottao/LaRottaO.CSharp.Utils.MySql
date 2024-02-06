@@ -1,8 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace LaRottaO.CSharp.MySqlUtilities
@@ -12,8 +9,6 @@ namespace LaRottaO.CSharp.MySqlUtilities
         public async Task<Tuple<Boolean, String, int>> truncate(string argConnString, String argQuery, int argTimeOutMs)
         {
             MySqlConnection mySqlConnection = new MySqlConnection(argConnString);
-
-            MySqlDataReader mySqlDataReader = null;
 
             try
             {
@@ -26,7 +21,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
                     mySqlCommand.CommandTimeout = argTimeOutMs;
                 }
 
-                int truncateResult = mySqlCommand.ExecuteNonQuery();
+                int truncateResult = await mySqlCommand.ExecuteNonQueryAsync();
 
                 return new Tuple<Boolean, String, int>(true, Constants.MYSQL_SUCCESS, truncateResult);
             }
@@ -36,11 +31,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
             }
             finally
             {
-                if (mySqlDataReader != null)
-                {
-                    mySqlDataReader.Close();
-                    mySqlConnection.Close();
-                }
+                mySqlConnection.Close();
             }
         }
     }

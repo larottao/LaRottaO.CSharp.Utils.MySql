@@ -1,8 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Data.Common;
 using System.Threading.Tasks;
 
 namespace LaRottaO.CSharp.MySqlUtilities
@@ -13,7 +12,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
         {
             MySqlConnection mySqlConnection = new MySqlConnection(argConnString);
 
-            MySqlDataReader mySqlDataReader = null;
+            DbDataReader dbDataReader = null;
 
             try
             {
@@ -26,13 +25,13 @@ namespace LaRottaO.CSharp.MySqlUtilities
                     mySqlCommand.CommandTimeout = argTimeoutMs;
                 }
 
-                mySqlDataReader = mySqlCommand.ExecuteReader();
+                dbDataReader = await mySqlCommand.ExecuteReaderAsync();
 
                 List<String> outputList = new List<String>();
 
-                while (mySqlDataReader.Read())
+                while (dbDataReader.Read())
                 {
-                    outputList.Add(mySqlDataReader.GetValue(argRequiredColumnIndex).ToString());
+                    outputList.Add(dbDataReader.GetValue(argRequiredColumnIndex).ToString());
                 }
 
                 if (outputList.Count == 0)
@@ -48,14 +47,11 @@ namespace LaRottaO.CSharp.MySqlUtilities
             }
             finally
             {
-                if (mySqlDataReader != null)
+                if (dbDataReader != null)
                 {
-                    mySqlDataReader.Close();
+                    dbDataReader.Close();
                 }
-                if (mySqlConnection != null)
-                {
-                    mySqlConnection.Close();
-                }
+                mySqlConnection.Close();
             }
         }
     }

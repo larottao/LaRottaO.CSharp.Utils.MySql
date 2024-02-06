@@ -2,8 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
+using System.Data.Common;
 using System.Threading.Tasks;
 
 namespace LaRottaO.CSharp.MySqlUtilities
@@ -43,7 +42,7 @@ namespace LaRottaO.CSharp.MySqlUtilities
 
                 List<Dictionary<String, Object>> totalOutputRows = new List<Dictionary<String, Object>>();
 
-                using (MySqlDataReader mySqlDataReader = mySqlCommand.ExecuteReader())
+                using (DbDataReader mySqlDataReader = await mySqlCommand.ExecuteReaderAsync())
                 {
                     while (mySqlDataReader.Read())
                     {
